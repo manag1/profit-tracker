@@ -67,7 +67,7 @@ if not data.empty:
     total_day_pl = data["DayProfitLoss"].sum()
     total_dist_profit = data["ProfitDistributed"].sum()
     cumulative_loss = total_day_pl - total_dist_profit
-    net_profit =  - (total_dist_profit - cumulative_loss)
+    net_profit =  (total_dist_profit - cumulative_loss)
     each_person_total = total_dist_profit / 3 if total_dist_profit else 0
 
     # Latest Entry
